@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shard Smith — Idle Clicker (Multi-Prestige)</title>
+  style.css
+</head>
+<body>
+  <header class="topbar">
+    <div class="stat"><div class="label">Shards</div><div id="shards" class="value">0</div></div>
+    <div class="stat"><div class="label">Dust</div><div id="dust" class="value">0</div></div>
+    <div class="stat"><div class="label">Essence</div><div id="essence" class="value">0</div></div>
+    <div class="stat"><div class="label">Relics</div><div id="relics" class="value">0</div></div>
+    <div class="stat"><div class="label">Rate</div><div id="rate" class="value">0 /s</div></div>
+    <div class="spacer"></div>
+    <button id="saveBtn" class="ghost">Save</button>
+    <button id="exportBtn" class="ghost">Export</button>
+    <button id="importBtn" class="ghost">Import</button>
+    <button id="resetBtn" class="ghost danger">Hard Reset</button>
+  </header>
+
+  <main class="layout">
+    <section class="left">
+      <h1>Shard Smith</h1>
+      <p class="subtitle">Forge shards, invest, and climb prestige layers — Dust → Essence → Relics.</p>
+
+      <div class="clicker">
+        <button id="forgeBtn" class="forge">Forge +<span id="clickPower">1</span></button>
+        <div class="hint">Tip: Hold <kbd>Shift</kbd> to buy ×10, <kbd>Ctrl</kbd> for MAX.</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="generators">Generators</button>
+        <button class="tab" data-tab="upgrades">Upgrades</button>
+        <button class="tab" data-tab="research">Research</button>
+        <button class="tab" data-tab="artifacts">Artifacts</button>
+        <button class="tab" data-tab="achievements">Achievements</button>
+        <button class="tab" data-tab="prestige">Prestige</button>
+        <button class="tab" data-tab="settings">Settings</button>
+      </div>
+
+      <div id="tab-generators" class="panel active"><div id="generators" class="cardlist"></div></div>
+      <div id="tab-upgrades" class="panel"><div id="upgrades" class="cardlist"></div></div>
+      <div id="tab-research" class="panel"><div id="research" class="cardlist"></div></div>
+      <div id="tab-artifacts" class="panel"><div id="artifacts" class="cardlist"></div></div>
+      <div id="tab-achievements" class="panel"><div id="achievements" class="achvlist"></div></div>
+
+      <div id="tab-prestige" class="panel">
+        <div class="card"><div><div class="title">Ascend → Gain Dust</div><div class="desc">Reset shards & generators. Keep upgrades, research, artifacts.</div><div class="meta">Potential Dust: <span id="potentialDust">0</span></div></div><div><button id="ascendBtn">Ascend</button></div></div>
+        <div class="card"><div><div class="title">Transcend → Gain Essence</div><div class="desc">Reset shards, generators, upgrades & research. Reset Dust to 0. Artifacts persist.</div><div class="meta">Potential Essence: <span id="potentialEssence">0</span></div></div><div><button id="transcendBtn">Transcend</button></div></div>
+        <div class="card"><div><div class="title">Eternity → Gain Relics</div><div class="desc">Full reset. Dust & Essence reset to 0. Artifacts reset. Achievements persist.</div><div class="meta">Potential Relics: <span id="potentialRelics">0</span></div></div><div><button id="eternityBtn">Eternity</button></div></div>
+      </div>
+
+      <div id="tab-settings" class="panel">
+        <label class="row"><span>Autosave (every 10s)</span><input type="checkbox" id="autosaveToggle" checked /></label>
+        <label class="row"><span>Animations</span><input type="checkbox" id="animToggle" checked /></label>
+        <p class="small">Offline progress is applied when you return. Saves live in your browser.</p>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="panel info"><h3>Milestones</h3><ul id="milestones" class="milestones"></ul></div>
+      <div class="panel info"><h3>Log</h3><div id="log" class="log"></div></div>
+    </aside>
+  </main>
+
+  <footer class="footer">Shard Smith v2.0 — Multi-Prestige</footer>
+  script.js</script>
+</body>
+</html>
+
