@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shard Smith — Idle Clicker</title>
+  <link rel="stylesheet" href="eader class="topbar">
+    <div class="stat">
+      <div class="label">Shards</div>
+      <div id="shards" class="value">0</div>
+    </div>
+    <div class="stat">
+      <div class="label">Dust (Prestige)</div>
+      <div id="dust" class="value">0</div>
+    </div>
+    <div class="stat">
+      <div class="label">Rate</div>
+      <div id="rate" class="value">0 /s</div>
+    </div>
+    <div class="spacer"></div>
+    <button id="saveBtn" class="ghost">Save</button>
+    <button id="exportBtn" class="ghost">Export</button>
+    <button id="importBtn" class="ghost">Import</button>
+    <button id="resetBtn" class="ghost danger">Hard Reset</button>
+  </header>
+
+  <main class="layout">
+    <section class="left">
+      <h1>Shard Smith</h1>
+      <p class="subtitle">Forge shards, buy generators, ascend to earn dust, and keep pushing!</p>
+
+      <div class="clicker">
+        <button id="forgeBtn" class="forge">Forge +<span id="clickPower">1</span></button>
+        <div class="hint">Tip: Hold <kbd>Shift</kbd> to buy ×10, <kbd>Ctrl</kbd> for MAX.</div>
+      </div>
+
+      <div class="prestige">
+        <div>Ascension grants Dust that permanently boosts all production.</div>
+        <div>Potential Dust: <span id="potentialDust">0</span></div>
+        <button id="ascendBtn" class="prestigeBtn">Ascend & Reset</button>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="generators">Generators</button>
+        <button class="tab" data-tab="upgrades">Upgrades</button>
+        <button class="tab" data-tab="achievements">Achievements</button>
+        <button class="tab" data-tab="settings">Settings</button>
+      </div>
+
+      <div id="tab-generators" class="panel active">
+        <div id="generators" class="cardlist"></div>
+      </div>
+      <div id="tab-upgrades" class="panel">
+        <div id="upgrades" class="cardlist"></div>
+      </div>
+      <div id="tab-achievements" class="panel">
+        <div id="achievements" class="achvlist"></div>
+      </div>
+      <div id="tab-settings" class="panel">
+        <label class="row">
+          <span>Autosave (every 10s)</span>
+          <input type="checkbox" id="autosaveToggle" checked />
+        </label>
+        <label class="row">
+          <span>Animations</span>
+          <input type="checkbox" id="animToggle" checked />
+        </label>
+        <p class="small">Offline progress is applied when you return. Your game saves locally to your browser.</p>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="panel info">
+        <h3>Milestones</h3>
+        <ul id="milestones" class="milestones"></ul>
+      </div>
+      <div class="panel info">
+        <h3>Log</h3>
+        <div id="log" class="log"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">Made with ❤ — Idle/Clicker template. v1.0</footer>
+
+  script.js</script>
+</body>
+</html>
