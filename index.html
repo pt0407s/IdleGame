@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,9 +47,33 @@
       <div id="tab-achievements" class="panel"><div id="achievements" class="achvlist"></div></div>
 
       <div id="tab-prestige" class="panel">
-        <div class="card"><div><div class="title">Ascend → Gain Dust</div><div class="desc">Reset shards & generators. Keep upgrades, research, artifacts.</div><div class="meta">Potential Dust: <span id="potentialDust">0</span></div></div><div><button id="ascendBtn">Ascend</button></div></div>
-        <div class="card"><div><div class="title">Transcend → Gain Essence</div><div class="desc">Reset shards, generators, upgrades & research. Reset Dust to 0. Artifacts persist.</div><div class="meta">Potential Essence: <span id="potentialEssence">0</span></div></div><div><button id="transcendBtn">Transcend</button></div></div>
-        <div class="card"><div><div class="title">Eternity → Gain Relics</div><div class="desc">Full reset. Dust & Essence reset to 0. Artifacts reset. Achievements persist.</div><div class="meta">Potential Relics: <span id="potentialRelics">0</span></div></div><div><button id="eternityBtn">Eternity</button></div></div>
+        <div class="card">
+          <div>
+            <div class="title">Ascend → Gain Dust</div>
+            <div class="desc">Reset shards & generators. Keep upgrades, research, artifacts.</div>
+            <div class="meta">Potential Dust: <span id="potentialDust">0</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="title">Transcend → Gain Essence</div>
+            <div class="desc">Reset shards, generators, upgrades & research. Reset Dust to 0. Artifacts persist.</div>
+            <div class="meta">Potential Essence: <span id="potentialEssence">0</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="title">Eternity → Gain Relics</div>
+            <div class="desc">Full reset. Dust & Essence reset to 0. Artifacts reset. Achievements persist.</div>
+            <div class="meta">Potential Relics: <span id="potentialRelics">0</span></div>
+          </div>
+        </div>
+        <!-- ADDED BUTTONS BELOW -->
+        <div class="prestige-actions" style="margin-top:16px; display:flex; gap:10px;">
+          <button id="ascendBtn" class="ghost">Ascend</button>
+          <button id="transcendBtn" class="ghost">Transcend</button>
+          <button id="eternityBtn" class="ghost danger">Eternity</button>
+        </div>
       </div>
 
       <div id="tab-settings" class="panel">
@@ -68,7 +91,5 @@
 
   <footer class="footer">Shard Smith v2.0 — Multi-Prestige</footer>
   <script src="script.js"></script>
-
 </body>
 </html>
-
